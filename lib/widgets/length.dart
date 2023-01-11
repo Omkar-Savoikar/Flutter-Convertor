@@ -37,20 +37,20 @@ class _LengthState extends State<Length> {
               child: Column(
                 children: <Widget>[
                   DropdownButton<String>(
-                      value: dropDownValue1,
-                      elevation: 16,
-                      icon: const Icon(Icons.keyboard_arrow_down),
-                      items: list.map<DropdownMenuItem<String>>((String value) {
-                        return DropdownMenuItem<String>(
-                          value: value,
-                          child: Text(value),
-                        );
-                      }).toList(),
-                      onChanged: (String? value) {
-                        setState(() {
-                          dropDownValue1 = value!;
-                        });
-                      }
+                    value: dropDownValue1,
+                    elevation: 16,
+                    icon: const Icon(Icons.keyboard_arrow_down),
+                    items: list.map<DropdownMenuItem<String>>((String value) {
+                      return DropdownMenuItem<String>(
+                        value: value,
+                        child: Text(value),
+                      );
+                    }).toList(),
+                    onChanged: (String? value) {
+                      setState(() {
+                        dropDownValue1 = value!;
+                      });
+                    }
                   ),
                   Center(
                     child: Container(
@@ -81,19 +81,19 @@ class _LengthState extends State<Length> {
                     ),
                   ),
                   DropdownButton <String>(
-                      value: dropDownValue2,
-                      elevation: 16,
-                      items: list.map<DropdownMenuItem<String>>((String value) {
-                        return DropdownMenuItem<String>(
-                          value: value,
-                          child: Text(value),
-                        );
-                      }).toList(),
-                      onChanged: (String? value) {
-                        setState(() {
-                          dropDownValue2 = value;
-                        });
-                      }
+                    value: dropDownValue2,
+                    elevation: 16,
+                    items: list.map<DropdownMenuItem<String>>((String value) {
+                      return DropdownMenuItem<String>(
+                        value: value,
+                        child: Text(value),
+                      );
+                    }).toList(),
+                    onChanged: (String? value) {
+                      setState(() {
+                        dropDownValue2 = value;
+                      });
+                    }
                   ),
                   SizedBox(
                     width: MediaQuery.of(context).size.width * 0.5,
@@ -113,8 +113,7 @@ class _LengthState extends State<Length> {
                       onPressed: () {
                         _formKey.currentState?.save();
                         setState(() {
-                          finalValue =
-                              convertor();
+                          finalValue = convertor();
                         });
                       },
                       child: const Text("Submit"),
@@ -134,7 +133,7 @@ class _LengthState extends State<Length> {
     if (dropDownValue1?.compareTo("Kilometer") == 0) {
       mtr = inpVal * 1000;
     } else if (dropDownValue1?.compareTo("Centimeter") == 0) {
-      mtr = (inpVal / 100);
+      mtr = inpVal / 100;
     }
     return mtr;
   }
@@ -144,7 +143,7 @@ class _LengthState extends State<Length> {
     if (dropDownValue2?.compareTo("Kilometer") == 0) {
       mtr = inpVal / 1000;
     } else if (dropDownValue2?.compareTo("Centimeter") == 0) {
-      mtr = (inpVal * 100);
+      mtr = inpVal * 100;
     }
     return mtr;
   }

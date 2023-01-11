@@ -1,4 +1,9 @@
+import 'package:convertor/widgets/area.dart';
+import 'package:convertor/widgets/data.dart';
 import 'package:convertor/widgets/length.dart';
+import 'package:convertor/widgets/mass.dart';
+import 'package:convertor/widgets/temperature.dart';
+import 'package:convertor/widgets/volume.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -66,6 +71,41 @@ class _HomeState extends State<Home> {
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => const Length()),
+        );
+        break;
+      }
+      case 1: {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const Area()),
+        );
+        break;
+      }
+      case 2: {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const Volume()),
+        );
+        break;
+      }
+      case 3: {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const Mass()),
+        );
+        break;
+      }
+      case 4: {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const Temperature()),
+        );
+        break;
+      }
+      case 5: {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const Data()),
         );
         break;
       }
